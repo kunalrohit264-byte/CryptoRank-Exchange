@@ -14,3 +14,230 @@
 h1 {
   font-size: 1.8em;
 }
+
+/* Card and table styling */
+.card {
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(22, 24, 27, 0.08);
+  padding: 12px;
+}
+
+.card-text {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  text-align: left;
+  padding: 12px 10px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+th {
+  background: #f7f9fb;
+  font-weight: 600;
+}
+
+.muted {
+  color: #6b7280;
+  padding: 18px 0;
+}
+
+.search-input {
+  padding: 8px 10px;
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
+  width: 280px;
+}
+
+.w-10 {
+  width: 80px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+/* Responsive tweaks */
+@media (max-width: 640px) {
+  th,
+  td {
+    padding: 8px 6px;
+  }
+  .search-input {
+    width: 100%;
+    max-width: 320px;
+  }
+}
+
+/* Dark monster theme */
+.dark-monster {
+  min-height: 100vh;
+  background: radial-gradient(
+    ellipse at top left,
+    #0b1220 0%,
+    #07101a 40%,
+    #03050a 100%
+  );
+  color: #e6eef8;
+  padding-bottom: 40px;
+}
+
+.dark-monster .app-header {
+  background: transparent !important;
+  padding: 18px 24px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+.dark-monster .app-title {
+  color: #bfe3ff;
+  font-weight: 700;
+}
+
+.dark-monster .card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  box-shadow: 0 8px 30px rgba(2, 6, 23, 0.6);
+}
+
+.dark-monster th,
+.dark-monster td {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+.dark-monster th {
+  background: rgba(255, 255, 255, 0.02);
+  color: #dbeafe;
+}
+
+.dark-monster .muted {
+  color: #9aa6b2;
+}
+
+.dark-monster .search-input {
+  background: rgba(255, 255, 255, 0.02);
+  color: #e6eef8;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.trending-container {
+  max-width: 960px;
+  margin: 20px auto;
+}
+
+.trending-title {
+  color: #9ae6ff;
+  margin-bottom: 8px;
+}
+
+.trending-list {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.trending-card {
+  background: linear-gradient(
+    135deg,
+    rgba(124, 58, 237, 0.14),
+    rgba(14, 165, 233, 0.06)
+  );
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  padding: 12px;
+  border-radius: 10px;
+  min-width: 180px;
+}
+
+.trending-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 6px;
+}
+.trending-header .code {
+  color: #c7f9ff;
+  font-size: 0.9em;
+}
+.trending-body .rate {
+  font-size: 0.9em;
+  color: #d1f5ff;
+}
+.trending-body .coins {
+  font-weight: 700;
+  margin-top: 6px;
+  color: #fff;
+}
+
+/* Accent colors */
+.accent {
+  color: #7c3aed;
+}
+
+/* Transitions and chart layout */
+.trending-card,
+.card,
+.chart-card,
+table tr {
+  transition:
+    transform 220ms ease,
+    box-shadow 220ms ease,
+    background-color 220ms ease;
+}
+
+.trending-card:hover {
+  transform: translateY(-6px) scale(1.01);
+  box-shadow: 0 12px 30px rgba(2, 6, 23, 0.6);
+}
+.chart-card {
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: 8px;
+  padding: 10px;
+  min-width: 220px;
+}
+.chart-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 6px;
+  color: #dff8ff;
+}
+.charts-grid {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 960px;
+  margin: 0 auto;
+}
+.charts-title {
+  color: #9ae6ff;
+  margin: 12px auto;
+}
+
+table tr:hover {
+  background: rgba(255, 255, 255, 0.02);
+  transform: translateX(4px);
+}
+.sparkline {
+  display: block;
+}
+
+/* Small responsive tweak for charts */
+@media (max-width: 640px) {
+  .charts-grid {
+    gap: 10px;
+  }
+  .chart-card {
+    min-width: 140px;
+    padding: 8px;
+  }
+}
